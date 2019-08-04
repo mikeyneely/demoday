@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <meta charset="utf-8">
+    <title>BETA</title>
+  </head>
+  <body>
+    <section class="backgroudStyle">
+      <h1 class="headerMargin">My Demo Day Project</h1>
+    <section class="sectSlim">
+      <h3>Connecting Rappers and Producers</h3>
+      <p>Sign up and connect with local Rappers and Producers and make music together! </p>
+      <img src="img/logo.png" alt="hip hop" id="signUpImg">
+    </section>
+    <p>Already have an account? <a href="/login">Log in</a></p>
+    <section class="sectWide">
+    <h2><span class="signUp"></span> Signup</h2>
+
+    <!-- LOGIN FORM -->
+    <form action="/signup" method="post">
+        <div class="form-group">
+            <label>Username</label>
+            <input type="text" class="form-control" name="email">
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control" name="password">
+        </div>
+        <div class="form-group">
+            <label>Stage Name</label>
+            <input type="text" class="form-control" name="stageName">
+        </div>
+<!-- Am I using this code correctly? Is it doing what I want? -->
+        <div class="form-group signUpCheckbox" >
+
+            <input type="checkbox" class="form-control signUpCheckbox" name="musicStyle" value="rapper" id="rapperSignUp">
+            <label for="rapperSignUp">I'm a Rapper</label>
+        </div>
+        <div class="form-group signUpCheckbox">
+            <label for="producerSignUp">I'm a Producer</label>
+            <input type="checkbox" class="form-control" name="musicStyle" value="producer" id="producerSignUp">
+        </div>
+        <div class="form-group">
+            <label>City</label>
+            <input type="text" class="form-control" name="city">
+        </div>
+        <div class="form-group">
+            <label>Write a little about yourself</label>
+            <input type="text" class="form-control" name="aboutUser">
+        </div>
+
+        <button type="submit" class="btn btn-warning btn-lg">Signup</button>
+    </form>
+
+    <hr>
+
+    <p>Already have an account? <a href="/login">Log in</a></p>
+    <p>Or go <a href="/">home</a>.</p>
+    </section>
+    </section>
+    <script src="main.js"></script>
+  </body>
+</html>

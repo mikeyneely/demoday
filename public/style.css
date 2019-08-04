@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 1% !important;
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+  color: white !important;
+  height: 800px;
+}
+/* .backgroudStyle {
+  margin: 1%;
+  height: 800px;
+  color: white;
+} */
+.headerMargin {
+  margin-left: 35%;
+  margin-bottom: 5%;
+  margin-top: 1%;
+}
+.sectWide {
+  padding-left: 1%;
+  width: 60%;
+  float: left;
+  margin: 0px 1% 0px 1%;
+}
+#signUpImg {
+    vertical-align: middle;
+    height: 250px;
+    margin-top: 4rem;
+}
+.sectSlim {
+  width: 35%;
+  padding-left: 1%;
+  float: left;
+  border-right: 1px solid grey;
+}
+/* #producerSignUp {
+  float: left;
+} */
+.form-group.signUpCheckbox {
+    width: 50%;
+    float: left;
+    margin: 0;
+}
+#rapperSignUp {
+  padding: 0;
+  margin: 0;
+  width :10%;
+  float: left;
+  /* margin: 0px 5% 0px 20% */
+}
+#producerSignUp {
+  margin: 0:
+  padding: 0;
+  width: 10%;
+  float: left;
+
+}
+/* Css for when you are logged in */
+ul {
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 2em;
+}
+.navLinks {
+    margin-bottom: 16%;
+
+}
+  a {
+    text-decoration: none;
+    color: white !important;
+
+}
