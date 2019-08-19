@@ -1,6 +1,6 @@
 // config/database.js
 module.exports = {
 
-    'url' : 'mongodb+srv://sirmikeyrocks:meleah22@crud1-68o08.mongodb.net/savage?retryWrites=true&w=majority',
-    'dbName': 'userDb'
+    'url' : `mongodb+srv://${process.env.userName}:${process.env.password}@crud1-68o08.mongodb.net/${process.env.database}?retryWrites=true&w=majority',`
+    'dbName': 'userInfo'
 };

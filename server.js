@@ -2,6 +2,9 @@
 
 // set up ======================================================================
 // get all the tools we need
+if (process.env.NODE_ENV !== ‘production’) {
+require(‘dotenv’).config();
+}
 var express  = require('express');
 var app      = express();
 var port     = process.env.PORT || 8080;
@@ -9,21 +12,22 @@ const MongoClient = require('mongodb').MongoClient
 var mongoose = require('mongoose');
 var passport = require('passport');
 var flash    = require('connect-flash');
+var ObjectID = require('mongodb').ObjectID;
+var multer = require('multer');
 
 var morgan       = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser   = require('body-parser');
 var session      = require('express-session');
-
 var configDB = require('./config/database.js');
 
 var db
 
 // configuration ===============================================================
-mongoose.connect(configDB.url, (err, database) => {
+mongoose.connect(configDB.url, { useNewUrlParser: true }, (err, database) => {
   if (err) return console.log(err)
   db = database
-  require('./app/routes.js')(app, passport, db);
+  require('./app/routes.js')(app, passport, db, multer, ObjectID);
 }); // connect to our database
 
 //app.listen(port, () => {

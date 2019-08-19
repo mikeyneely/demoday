@@ -19,7 +19,23 @@ var thumbDown = document.getElementsByClassName("fa-thumbs-down");
   //   window.location.reload(true)
   // })
 // })
-
+//attempted to enable users to update the about me of their profile. I feel like I'm close
+// document.getElementById('updateProfileButton').addEventListener('click', ()=> {
+//   fetch('update', {
+//     method: 'put',
+//     headers: {'Content-Type': 'application/json'},
+//     body: JSON.stringify({
+//       'aboutUser': req.body.aboutUser
+//     })
+//   })
+//   .then(response => {
+//     if (response.ok) return response.json()
+//   })
+//   .then(data => {
+//     console.log(data)
+//     window.location.reload(true)
+//   })
+// })
 
 Array.from(thumbUp).forEach(function(element) {
       element.addEventListener('click', function(){
