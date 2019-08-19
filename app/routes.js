@@ -58,7 +58,7 @@ module.exports = function(app, passport, db, multer, ObjectId) {
       if (err) return console.log(err)
       console.log('got post', req.user.local.stageName,result)
       if (err) return console.log(err)
-      res.render('updateprofile.ejs', {
+      res.render('updateProfile.ejs', {
         user : req.user,
         posts: result
       })
