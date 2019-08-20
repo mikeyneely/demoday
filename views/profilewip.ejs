@@ -11,13 +11,13 @@
   </head>
   <body>
     <%- include('navLayout'); -%>
-    <h3 class="chatHeader">Post ANYTHING.</h3>
 
-    <form class="chatForm" action="/messages" method="post">
+    form class="" action="/messages" method="post">
       <label for="">Post a link to your Music!</label>
       <input type="text" name="msg" >
       <button type="button" name="button">Submit</button>
     </form>
+    <h3>Looking to collab? Check out popular Artists</h3>
    <!-- just a test to see if I could get an image to show up -->
     <!-- <img src="<%= user.profileImage %>" alt=""> -->
     <ul class="messages">
@@ -32,10 +32,12 @@
       </li>
     <% } %>
     </ul>
+
+      <% } %>
           <!-- <span><i class="fa fa-thumbs-up" aria-hidden="true"></i></span>
           <span><i class="fa fa-thumbs-down" aria-hidden="true"></i></span> -->
           <!-- <span><i class="fa fa-trash" aria-hidden="true"></i></span> -->
-
+      
     <script src="/main.js"></script>
     <script src="/js/jquery.min.js"></script>
   	<script src="/js/jquery.dropotron.min.js"></script>

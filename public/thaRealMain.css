@@ -1,0 +1,53 @@
+#intro {
+
+  background-color: white;
+}
+.imgContainer {
+  min-height: 500px;
+}
+.profileInfoText {
+    display: block;
+    /* float: left; */
+    /* display: block; */
+    margin: 50px 0 10px 45%;
+    font-size: 23px;
+    letter-spacing: 2px;
+    color: black;
+}
+
+.profileImg {
+    height: 350px;
+    width: auto;
+    float: left;
+    margin: 20px 20px 20px 12%;
+}
+.chatForm {
+    width: 35%;
+    margin-left: 35%;
+    margin-top: 15px;
+}
+.chatHeader {
+    margin-left: 45%;
+}
+li.message {
+    margin-left: 35%;
+    margin-top: 20px;
+    font-size: 20px;
+    list-style-type: none;
+}
+.updateProfileInfoText {
+    display: block;
+    /* float: left; */
+    /* display: block; */
+    /* margin: 50px 0 10px 45%; */
+    font-size: 23px;
+    margin: 20px 5% 6px 12%;
+    letter-spacing: 2px;
+    color: black;
+}
+.updateProfileImg {
+    height: 350px;
+    width: auto;
+    float: left;
+    margin: 20px 20px 20px 15%;
+}

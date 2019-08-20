@@ -1,68 +1,39 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<head>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
-  <meta charset="utf-8">
-  <title>collabConnect</title>
-</head>
-<body>
-  <section class="backgroudStyle">
-    <h1 class="headerMargin">Update your profile.</h1>
-    <section class="sectSlim">
-      <nav>
-        <ul>
-          <li class="navLinks"><a href="#"><h2><i class="fa fa-user"></i> [user account]</h2></a></li>
-          <!-- never figured out how to set up friends but I will work on that post cohort -->
-          <!-- <li class="navLinks"><a href="#"><i class="fas fa-user-friends"></i> Friends</a></li> -->
-          <li class="navLinks"><a href="/profile"><i class="fas fa-envelope"></i> Global Chat</a></li>
-          <li class="navLinks"><a href="/feed"><i class="fas fa-globe"></i> Find Collab</a></li>
-          <!-- <li class="navLinks"><a href="#"><i class="fas fa-envelope"></i> Find Producers</a></li> -->
-          <li class="navLinks"><a href="/updateprofile"><i class="fas fa-cogs"></i> Update Profile</a></li>
-          <li class="navLinks"><a href="/logout"><i class="fas fa-sign-out-alt"></i> Log Out</a></li>
-        </ul>
-      </nav>
-    </section>
-    <section class="sectWide">
-
-
-      <span class="updateProfileInfoText"><img class ="updateProfileImg" src="/<%= user.profileImage %>" alt=""></span>
-      <span class="updateProfileInfoText">Name: <%= user.local.stageName %></span>
-      <span class="updateProfileInfoText"><%= user.local.rapper %></span>
-      <span class="updateProfileInfoText">Location: <%= user.local.city %></span>
-      <span class="updateProfileInfoText">About me: <%= user.local.aboutUser %></span>
-      <!-- <span><i class="fa fa-thumbs-up" aria-hidden="true"></i></span>
-      <span><i class="fa fa-thumbs-down" aria-hidden="true"></i></span> -->
-      <!-- <span><i class="fa fa-trash" aria-hidden="true"></i></span> -->
-      <form action="/up" enctype="multipart/form-data" method="POST">
-        <label for="">Change Profile Image</label>
-        <input type="file" name="file-to-upload" value="">
-        <input type="submit" name="" value="Upload">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <%- include('navLayout'); -%>
+    <span class="updateProfileInfoText"><img class ="profileImg" src="/<%= user.profileImage %>" alt=""></span>
+    <span class="updateProfileInfoText">Name: <%= user.local.stageName %></span>
+    <span class="updateProfileInfoText"><%= user.local.rapper %></span>
+    <span class="updateProfileInfoText">Location: <%= user.local.city %></span>
+    <span class="updateProfileInfoText">About me: <%= user.local.aboutUser %></span>
+    <!-- <span><i class="fa fa-thumbs-up" aria-hidden="true"></i></span>
+    <span><i class="fa fa-thumbs-down" aria-hidden="true"></i></span> -->
+    <!-- <span><i class="fa fa-trash" aria-hidden="true"></i></span> -->
+    <form action="/up" enctype="multipart/form-data" method="POST">
+      <label for="">Change Profile Image</label>
+      <input type="file" name="file-to-upload" value="">
+      <input type="submit" name="" value="Upload">
+    </form>
+    <% if (!posts) { %>
+      <form class="" action="/upSong" enctype="multipart/form-data" method="POST">
+        <label for="">Upload a Song(mp3 format!)</label>
+        <input type="file" name="song" value="">
+        <input type="submit" name="" value="Upload1">
       </form>
-      <% if (!posts) { %>
-        <form class="" action="/upSong" enctype="multipart/form-data" method="POST">
-          <label for="">Upload a Song(mp3 format!)</label>
-          <input type="file" name="song" value="">
-          <input type="submit" name="" value="Upload1">
-        </form>
-        <% } %>
-        <% if (posts) { %>
-          <span>
-            <audio controls>
-              <source src="/<%= posts.profileSong %>" type="audio/mpeg">
-              </audio>
-            </span>
-            <% } %>
-          </section>
+      <% } %>
+      <% if (posts) { %>
+        <span>
+          <audio controls>
+            <source src="/<%= posts.profileSong %>" type="audio/mpeg">
+            </audio>
+          </span>
+          <% } %>
 
-
-        </section>
-        <!-- <form class="">
-        <input type="text" name="aboutUser" value="">
-        <button type="submit" name="button" id="updateProfileButton"></button>
-      </form> -->
-      <script src="main.js"></script>
-    </body>
-    </html>
+          <%- include('footerLayout'); -%>    
+  </body>
+</html>

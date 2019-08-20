@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<ul class="messages">
+		<% for(var i=0; i<messages.length; i++) {%>
+			<li>
+				<div class="col-4 col-6-medium col-12-small">
+					<section class="box">
+					<a href="/feed/<%= messages[i]._id %>"><img class ="profileImg" src="/<%= messages[i].profileImage %>" alt=""></a>
+						<header>
+							<h3><%= messages[i].local.stageName %></h3>
+						</header>
+						<p><%= messages[i].local.aboutUser %></p>
+						<footer>
+							<ul class="actions">
+								<li><a href="/feed/<%= messages[i]._id %>" class="button alt">view profile</a></li>
+							</ul>
+						</footer>
+					</section>
+				</div>
+			</li>
+		</ul>
+		</body>
+		</html>
