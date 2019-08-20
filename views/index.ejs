@@ -1,65 +1,58 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<head>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
-  <meta charset="utf-8">
-  <title>collabConnect</title>
-</head>
-<body>
-  <section class="backgroudStyle">
-    <section class="sectSlim">
-      <h1 class="headerMargin">collabConnect</h1>
-      <p>Are you a rapper who needs a producer?</p>
-      <p>Or a producer having trouble finding a rapper to work with?</p>
-      <p>collabConnect is the solution! </p>
-      <p>Join now and connect with local Rappers and Producers!</p>
-      <p>Share your music with others!</p>
-      <!-- <img src="img/logo.png" alt="collabConnect logo" id="signUpImg"> -->
-    </section>
-    <section class="sectWide">
-      <p>Already have an account? <a href="/login" class="linkCta">Log in</a></p>
-      <h2><span class="signUp">First time here?... Sign Up Now!</span></h2>
+  <head>
+    <link rel="stylesheet" href="/thaRealMain.css">
+    <link rel="stylesheet" href="/main1.css">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
 
-      <!-- LOGIN FORM -->
-      <form action="/signup" method="post">
-        <div class="form-group">
-          <label>Email</label>
-          <input type="text" class="form-control" name="email">
-        </div>
-        <div class="form-group">
-          <label>Password</label>
-          <input type="password" class="form-control" name="password">
-        </div>
-        <div class="form-group">
-          <label>Stage Name</label>
-          <input type="text" class="form-control" name="stageName">
-        </div>
-        <!-- Am I using this code correctly? Is it doing what I want? -->
-        <div class="form-group signUpCheckbox" >
-          <label for="rapperSignUp">I'm a Rapper</label>
-          <input type="checkbox" class="form-control signUpCheckbox" name="rapper" value="rapper" id="rapperSignUp">
-        </div>
-        <div class="form-group signUpCheckbox">
-          <label for="producerSignUp">I Make Beats</label>
-          <input type="checkbox" class="form-control" name="producer" value="producer" id="producerSignUp">
-        </div>
-        <div class="form-group">
-          <label>City</label>
-          <input type="text" class="form-control" name="city">
-        </div>
-        <div class="form-group">
-          <label>Write a little about yourself</label>
-          <input type="text" class="form-control" name="aboutUser">
-        </div>
+      <!-- Banner -->
+      <section id="banner">
+        <header>
+          <h2>Welcome to collabConnect.</h2>
+          <p>A site created for rappers and producers to share music and find other artists to work with.</p>
+          <p>Sign up, and let other users hear your latest hit by uploading a song to your profile.</p>
+          <p>post links to your music and videos and check out what other users are posting.</p>
+        </header>
+        <p class="landingText">Already have an account? <a class="landingCta" href="/login">Log In</a></p>
+        <!-- LOGIN FORM -->
+        <form action="/signup" class="signUpForm" method="post">
+          <div class="form-group">
+            <label>Email</label>
+            <input type="text" class="form-control" name="email">
+          </div>
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control" name="password">
+          </div>
+          <div class="form-group">
+            <label>Stage Name</label>
+            <input type="text" class="form-control" name="stageName">
+          </div>
+          <!-- Am I using this code correctly? Is it doing what I want? -->
+          <div class="form-group" >
+            <label for="rapperSignUp">I'm a Rapper</label>
+            <input type="checkbox" class="form-control signUpCheckbox" name="rapper" value="rapper" id="rapperSignUp">
+            <label for="producerSignUp">I Make Beats</label>
+            <input type="checkbox" class="form-control signUpCheckbox" name="producer" value="producer" id="producerSignUp">
+
+          </div>
+
+          <div class="form-group">
+            <label>City</label>
+            <input type="text" class="form-control" name="city">
+          </div>
+          <div class="form-group">
+            <label>Write a little about yourself</label>
+            <input type="text" class="form-control" name="aboutUser">
+          </div>
 
 
-        <button type="submit" class="linkCta">Sign up</button>
-      </form>
-    </section>
-  </section>
-  <script src="main.js"></script>
-</body>
+          <button type="submit" class="linkCta">Sign up</button>
+        </form>
+      </section>
+
+  </body>
 </html>

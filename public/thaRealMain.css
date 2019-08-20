@@ -51,3 +51,23 @@ li.message {
     float: left;
     margin: 20px 20px 20px 15%;
 }
+.landingText {
+    margin: 0 0 6px 0;
+    display: inherit;
+    font-size: 1.5em;
+    color: black;
+}
+.landingCta {
+  border: 1px solid gray;
+}
+.signUpForm {
+  width: 50%;
+  margin-left: 25%;
+}
+.signUpCheckbox {
+  /* height: 50px; */
+/* width: 20%; */
+/* border: 1px solid white; */
+-webkit-appearance: checkbox;
+}
+}
