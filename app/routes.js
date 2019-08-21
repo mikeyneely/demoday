@@ -149,8 +149,10 @@ module.exports = function(app, passport, db, multer, ObjectId) {
       uName = result[0].local.stageName
       uCity = result[0].local.city
       uAbout = result[0].local.aboutUser
-
-      db.collection('posts').save({stageName: uName, city: uCity, aboutUser: uAbout, profileSong: 'audio/uploads/' + req.file.filename}, (err, result) => {
+      uEmail = result[0].local.email
+      db.collection('posts').save({
+        stageName: uName, city: uCity, aboutUser: uAbout,
+        email: uEmail, profileSong: 'audio/uploads/' + req.file.filename}, (err, result) => {
         if (err) return console.log(err)
         console.log('saved to database')
         callback()

@@ -27,7 +27,7 @@
     margin-top: 15px;
 }
 .chatHeader {
-    margin-left: 45%;
+    margin-left: 26%;
 }
 li.message {
     margin-left: 35%;
@@ -70,4 +70,9 @@ li.message {
 /* border: 1px solid white; */
 -webkit-appearance: checkbox;
 }
+.contactForm {
+    width: 25%;
+    margin-left: 11%;
+    margin-top: 25px;
+    margin-right: 1%;
 }
